@@ -12,6 +12,7 @@ public class GazePointPlot : MonoBehaviour
 	private GazePoint _lastGazePoint = GazePoint.Invalid;
 	private bool _hasHistoricPoint;
 	private Vector3 _historicPoint;
+	[SerializeField] Canvas canvas;
 	// Start is called before the first frame update
 	void Start()
     {
@@ -35,6 +36,7 @@ public class GazePointPlot : MonoBehaviour
 	{
 		Vector3 gazePointInWorld = ProjectToPlaneInWorld(gazePoint);
 		transform.position = Smoothify(gazePointInWorld);
+		//transform.localPosition = ProjectToCanvas(gazePoint);
 	}
 
 	private Vector3 ProjectToPlaneInWorld(GazePoint gazePoint)
@@ -43,6 +45,13 @@ public class GazePointPlot : MonoBehaviour
 		gazeOnScreen += (transform.forward * VisualizationDistance);
 		return Camera.main.ScreenToWorldPoint(gazeOnScreen);
 	}
+
+	private Vector3 ProjectToCanvas(GazePoint gazePoint)
+    {
+		Vector2 viewPortEyePos = gazePoint.Viewport - new Vector2(0.5f, 0.5f);
+		Vector3 eyePos = viewPortEyePos * new Vector2(canvas.renderingDisplaySize.x / canvas.scaleFactor, canvas.renderingDisplaySize.y / canvas.scaleFactor);
+		return eyePos;
+    }
 
 	private Vector3 Smoothify(Vector3 point)
 	{
