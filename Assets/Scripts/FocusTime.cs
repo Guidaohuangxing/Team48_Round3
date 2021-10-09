@@ -20,6 +20,7 @@ public class FocusTime : MonoBehaviour
     private float decreaseRate = 0.5f;
     private bool completed = false;
     [SerializeField] Image progress;
+    [SerializeField] GameObject character;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +35,7 @@ public class FocusTime : MonoBehaviour
             if (gotPenalty)
             {
                 gotPenalty = false;
+                character.GetComponent<CharacterMovement>().DeactivateAngryMark();
             }
             focusDuration += Time.deltaTime;
             UpdateProgress();
@@ -48,10 +50,12 @@ public class FocusTime : MonoBehaviour
             if (continuousPenalty)
             {
                 PenaltyThroughTime();
+                character.GetComponent<CharacterMovement>().ActivateAngryMark();
             }
             else
             {
                 PenaltyOnce();
+                character.GetComponent<CharacterMovement>().ActivateAngryMark();
             }
 
         }

@@ -5,7 +5,7 @@ using Tobii.Gaming;
 
 public class BackGroundManager : MonoBehaviour
 {
-    public List<RectTransform> BG;
+    public List<Transform> BG;
 
     public List<float> speed;
     private Vector3 VSpeed;
