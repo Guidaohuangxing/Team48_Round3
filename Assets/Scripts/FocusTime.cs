@@ -39,6 +39,7 @@ public class FocusTime : MonoBehaviour
             UpdateProgress();
             if(focusDuration >= focusThreshold)
             {
+                focusDuration = focusThreshold;
                 completed = true;
             }
         }
@@ -73,6 +74,10 @@ public class FocusTime : MonoBehaviour
     void PenaltyThroughTime()
     {
         focusDuration -= Time.deltaTime * decreaseRate;
+        if (focusDuration < 0)
+        {
+            focusDuration = 0f;
+        }
         UpdateProgress();
     }
 

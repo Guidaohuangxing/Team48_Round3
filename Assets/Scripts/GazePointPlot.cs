@@ -13,6 +13,7 @@ public class GazePointPlot : MonoBehaviour
 	private bool _hasHistoricPoint;
 	private Vector3 _historicPoint;
 	[SerializeField] Canvas canvas;
+	public bool gazePointOnCanvas;
 	// Start is called before the first frame update
 	void Start()
     {
@@ -27,7 +28,14 @@ public class GazePointPlot : MonoBehaviour
 		if (gazePoint.IsRecent()
 			&& gazePoint.Timestamp > (_lastGazePoint.Timestamp + float.Epsilon))
 		{
-			UpdateGazeBubblePosition(gazePoint);
+            if (gazePointOnCanvas)
+            {
+				UpdateGazeBubbleOnCanvas(gazePoint);
+            }
+            else
+            {
+				UpdateGazeBubblePosition(gazePoint);
+			}
 			_lastGazePoint = gazePoint;
 		}
 	}
@@ -36,7 +44,11 @@ public class GazePointPlot : MonoBehaviour
 	{
 		Vector3 gazePointInWorld = ProjectToPlaneInWorld(gazePoint);
 		transform.position = Smoothify(gazePointInWorld);
-		//transform.localPosition = ProjectToCanvas(gazePoint);
+	}
+
+	private void UpdateGazeBubbleOnCanvas(GazePoint gazePoint)
+    {
+		transform.localPosition = ProjectToCanvas(gazePoint);
 	}
 
 	private Vector3 ProjectToPlaneInWorld(GazePoint gazePoint)
