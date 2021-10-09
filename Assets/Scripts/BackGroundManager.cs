@@ -26,7 +26,8 @@ public class BackGroundManager : MonoBehaviour
         {
             
             Vector3 target = ChangeGazePointToTarget(gazePoint, speed[i]);
-            BG[i].localPosition = Vector3.Lerp(BG[i].localPosition, target, 0.5f);
+            //BG[i].localPosition = Vector3.Lerp(BG[i].localPosition, target, 0.5f);
+            BG[i].localPosition = target;
         }
         _lastGazePoint = gazePoint;
 
