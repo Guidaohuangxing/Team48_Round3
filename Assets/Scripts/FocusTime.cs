@@ -17,7 +17,7 @@ public class FocusTime : MonoBehaviour
     private int penaltyCount = 0;
     public bool continuousPenalty;
     [SerializeField]
-    private float decreaseRate = 0.5f;
+    private float decreaseRate = 0.5f; // for continuous panelty
     private bool completed = false;
     [SerializeField] Image progress;
     [SerializeField] GameObject character;
