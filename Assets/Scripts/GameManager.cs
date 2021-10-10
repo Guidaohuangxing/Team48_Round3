@@ -26,7 +26,13 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
+        Scene thisScene = SceneManager.GetActiveScene();
+        Debug.Log(thisScene.name);
+        if (!thisScene.name.Equals("Menu"))
+        {
+            sceneIndex = int.Parse(thisScene.name[thisScene.name.Length - 1].ToString());
+            Debug.Log("scene index: " + sceneIndex);
+        }
     }
 
     // Update is called once per frame
@@ -38,7 +44,6 @@ public class GameManager : MonoBehaviour
     public void NextScene()
     {
         string next = scenes[sceneIndex];
-        sceneIndex += 1;
         SceneManager.LoadScene(next);
     }
 

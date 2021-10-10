@@ -6,12 +6,12 @@ public class CharacterMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     private float RandBlinkTime = 0f;
-    private Animator _animator;
+    [SerializeField] Animator _animator;
     [SerializeField] GameObject angryMark;
 
     void Start()
     {
-        _animator = GetComponent<Animator>();
+        //_animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -29,6 +29,11 @@ public class CharacterMovement : MonoBehaviour
         yield return new WaitForSeconds(RandBlinkTime);
         _animator.SetTrigger("blink");
         RandBlinkTime = 0f;
+    }
+
+    public void SetAnimator(Animator ani)
+    {
+        _animator = ani;
     }
 
     public void ActivateAngryMark()

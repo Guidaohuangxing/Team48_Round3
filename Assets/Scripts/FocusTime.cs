@@ -8,19 +8,8 @@ using Tobii.Gaming;
 public class FocusTime : MonoBehaviour
 {
     private GazeAware _gazeAware;
-    private float focusDuration = 0f; //s
-    [SerializeField]
-    private float focusThreshold = 5f; //s
-    [SerializeField]
-    private float penaltyRatio = 0.1f;
-    private bool gotPenalty = false;
-    private int penaltyCount = 0;
-    public bool continuousPenalty;
-    [SerializeField]
-    private float decreaseRate = 0.5f; // for continuous panelty
-    private bool completed = false;
-    [SerializeField] Image progress;
-    [SerializeField] GameObject character;
+    [SerializeField] FocusManager fm;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -32,66 +21,11 @@ public class FocusTime : MonoBehaviour
     {
         if (_gazeAware.HasGazeFocus)
         {
-            if (gotPenalty)
-            {
-                gotPenalty = false;
-                character.GetComponent<CharacterMovement>().DeactivateAngryMark();
-            }
-            focusDuration += Time.deltaTime;
-            UpdateProgress();
-            if(focusDuration >= focusThreshold)
-            {
-                focusDuration = focusThreshold;
-                completed = true;
-            }
+            fm.FocusOnTarget();
         }
         else
         {
-            if (continuousPenalty)
-            {
-                PenaltyThroughTime();
-                character.GetComponent<CharacterMovement>().ActivateAngryMark();
-            }
-            else
-            {
-                PenaltyOnce();
-                character.GetComponent<CharacterMovement>().ActivateAngryMark();
-            }
-
+            fm.Penalty();
         }
-    }
-    void PenaltyOnce()
-    {
-        if (!gotPenalty)
-        {
-            if (penaltyCount == 2)
-            {
-                Debug.Log("Game Over");
-            }
-
-            focusDuration -= focusThreshold * penaltyRatio;
-            UpdateProgress();
-            gotPenalty = true;
-            penaltyCount += 1;
-        }
-    }
-    void PenaltyThroughTime()
-    {
-        focusDuration -= Time.deltaTime * decreaseRate;
-        if (focusDuration < 0)
-        {
-            focusDuration = 0f;
-        }
-        UpdateProgress();
-    }
-
-    void UpdateProgress()
-    {
-        progress.fillAmount = focusDuration / focusThreshold;
-    }
-
-    public bool IsComplete()
-    {
-        return completed;
     }
 }
