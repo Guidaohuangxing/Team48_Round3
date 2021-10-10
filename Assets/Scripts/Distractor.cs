@@ -61,6 +61,7 @@ public class Distractor : MonoBehaviour
                 if(Vector3.Distance(target, transform.position) < 0.1f)
                 {
                     canMove = false;
+                    Destroy(this.gameObject);
                 }
             }
         }

@@ -212,11 +212,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pos: {x: 11.99, y: 3.77, z: 0}
-  target: {x: 0, y: 0, z: 0}
+  target: {x: -14.53, y: 6.65, z: 0}
   speed: 3
   canMove: 0
   rotateSpeed: 0.01
-  isRotate: 1
+  isRotate: 0
   coroTime: 3
 --- !u!95 &1504538541181224253
 Animator:
