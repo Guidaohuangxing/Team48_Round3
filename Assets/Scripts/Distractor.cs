@@ -87,4 +87,14 @@ public class Distractor : MonoBehaviour
         canMove = true;
         this.GetComponent<Animator>().SetBool("isMove", true);
     }
+
+
+    public void DestroyDog(string dog)
+    {
+        print("destroy dog");
+        if(dog != null)
+        {
+            Destroy(GameObject.FindGameObjectWithTag(dog));
+        }
+    }
 }
