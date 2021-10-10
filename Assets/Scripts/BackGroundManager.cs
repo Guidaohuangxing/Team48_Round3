@@ -12,6 +12,15 @@ public class BackGroundManager : MonoBehaviour
     GazePoint _lastGazePoint = GazePoint.Invalid;
     private GazePoint gazePoint;
     public Canvas canvas;
+    public List<Vector3> startPos = new List<Vector3>();
+
+    private void Start()
+    {
+        for(int i=0;i<BG.Count;i++)
+        {
+            startPos.Add(BG[i].position);
+        }
+    }
 
     private void FixedUpdate()
     {
@@ -25,20 +34,20 @@ public class BackGroundManager : MonoBehaviour
         for(int i = 0; i < BG.Count; i++)
         {
             
-            Vector3 target = ChangeGazePointToTarget(gazePoint, speed[i]);
+            Vector3 target = ChangeGazePointToTarget(gazePoint, speed[i], startPos[i]);
             //BG[i].localPosition = Vector3.Lerp(BG[i].localPosition, target, 0.5f);
-            BG[i].localPosition = target;
+            BG[i].position = target;
         }
         _lastGazePoint = gazePoint;
 
 
     }
 
-    private Vector3 ChangeGazePointToTarget(GazePoint gazePoint, float speed)
+    private Vector3 ChangeGazePointToTarget(GazePoint gazePoint, float speed, Vector3 BG)
     {
         Vector2 viewPort = gazePoint.Viewport - new Vector2(.5f, .5f);
         Vector2 eyePoint = viewPort ;
-        Vector3 TargetPos = new Vector3(Mathf.Atan(eyePoint.x) * speed, 0, 0);
+        Vector3 TargetPos = BG + new Vector3(Mathf.Atan(eyePoint.x) * speed, 0, 0);
         return TargetPos;
     }
 

@@ -10,10 +10,11 @@ public class Distractor : MonoBehaviour
     public Vector3 target = Vector3.zero;
     //speed
     public float speed = 3f;
-    public bool canMove = true;
+    public bool canMove = false;
     //rotate
     public float rotateSpeed = .01f;
     public bool isRotate = true;
+    public float coroTime = 3f;
     private float startTime = 0;
     private float endTime = 0;
     private float wholeRotateAngle = 0;
@@ -69,5 +70,20 @@ public class Distractor : MonoBehaviour
     public void Dead()
     {
         gameObject.SetActive(false);
+    }
+
+    public void StartMoveDistractor(string animateEnd)
+    {
+        if(animateEnd == "AnimateEnd")
+        {
+            print("start move");
+            StartCoroutine(StartMove());
+        }
+    }
+
+    IEnumerator StartMove()
+    {
+        yield return new WaitForSeconds(coroTime);
+        canMove = true;
     }
 }
