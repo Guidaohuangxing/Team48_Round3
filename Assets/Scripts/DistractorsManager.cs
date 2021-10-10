@@ -14,6 +14,7 @@ public class DistractorsManager : MonoBehaviour
     public List<distractorsStage> distractorsStages;
     public int stage = 0;
     public float time = 0;
+    [SerializeField] private GameObject distractorParent;
     private void Update()
     {
         GenerateDistractorsByStage();
@@ -28,7 +29,8 @@ public class DistractorsManager : MonoBehaviour
             {
                 for (int i = 0; i < distractorsStages[stage].generateDistractors.Count; i++)
                 {
-                    Instantiate(distractorsStages[stage].generateDistractors[i], distractorsStages[stage].generateDistractors[i].GetComponent<Distractor>().pos, Quaternion.identity);
+                    GameObject go = Instantiate(distractorsStages[stage].generateDistractors[i], distractorsStages[stage].generateDistractors[i].GetComponent<Distractor>().pos, Quaternion.identity);
+                    go.transform.SetParent(distractorParent.transform);
                 }
                 stage++;
                 time = 0;

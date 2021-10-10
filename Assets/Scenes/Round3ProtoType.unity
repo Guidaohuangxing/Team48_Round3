@@ -311,7 +311,7 @@ Transform:
   m_GameObject: {fileID: 171670361}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.0945, y: -0.059, z: 0}
-  m_LocalScale: {x: 0.78834397, y: 0.82729536, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8345390821626296452}
   m_RootOrder: 3
@@ -393,7 +393,7 @@ Transform:
   m_GameObject: {fileID: 270998755}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.0945, y: -0.059, z: 0}
-  m_LocalScale: {x: 0.78834397, y: 0.82729536, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8345390821626296452}
   m_RootOrder: 2
@@ -871,7 +871,7 @@ Transform:
   m_GameObject: {fileID: 879047549}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.0945, y: -0.059, z: 0}
-  m_LocalScale: {x: 0.78834397, y: 0.82729536, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 799207445}
   - {fileID: 1693090377}
@@ -1855,7 +1855,7 @@ Transform:
   m_GameObject: {fileID: 1537310855}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.0945, y: -0.059, z: 0}
-  m_LocalScale: {x: 0.78834397, y: 0.82729536, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8345390821626296452}
   m_RootOrder: 4
@@ -2370,54 +2370,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DistractorManager
       objectReference: {fileID: 0}
-    - target: {fileID: 3349444943464050570, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
-      propertyPath: distractorsStages.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
-      propertyPath: distractorsStages.Array.data[1].generateTimeMax
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
-      propertyPath: distractorsStages.Array.data[1].generateTimeMin
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
-      propertyPath: distractorsStages.Array.data[2].generateTimeMax
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
-      propertyPath: distractorsStages.Array.data[2].generateTimeMin
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
-      propertyPath: distractorsStages.Array.data[0].generateDistractors.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
-      propertyPath: distractorsStages.Array.data[1].generateDistractors.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
-      propertyPath: distractorsStages.Array.data[0].generateDistractors.Array.data[0]
+      propertyPath: distractorParent
       value: 
-      objectReference: {fileID: 8546399488808053009, guid: 5a60aba49bde53c4197c3773f088f17e, type: 3}
-    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
-      propertyPath: distractorsStages.Array.data[0].generateDistractors.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
-      propertyPath: distractorsStages.Array.data[1].generateDistractors.Array.data[0]
-      value: 
-      objectReference: {fileID: 9035112152450258098, guid: 17ec004286bd01147a9bcde7ac8794b3, type: 3}
-    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
-      propertyPath: distractorsStages.Array.data[2].generateDistractors.Array.data[0]
-      value: 
-      objectReference: {fileID: 1390781495239033347, guid: 1b649dd283f9d3b4a90a85fe28722baa, type: 3}
+      objectReference: {fileID: 2137471697}
     - target: {fileID: 3349444943464050572, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
       propertyPath: m_RootOrder
       value: 5

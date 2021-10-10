@@ -85,5 +85,6 @@ public class Distractor : MonoBehaviour
     {
         yield return new WaitForSeconds(coroTime);
         canMove = true;
+        this.GetComponent<Animator>().SetBool("isMove", true);
     }
 }
