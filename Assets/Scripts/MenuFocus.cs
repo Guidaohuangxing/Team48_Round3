@@ -11,6 +11,7 @@ public class MenuFocus : MonoBehaviour
     [SerializeField]
     private float focusThreshold = 3f; //s
     [SerializeField] Image progress;
+    private bool isClear = false;
     private TMPro.TextMeshPro text;
 
     // Start is called before the first frame update
@@ -29,13 +30,18 @@ public class MenuFocus : MonoBehaviour
             transform.localScale = new Vector3(1.1f, 1.1f, 1f);
             focusDuration += Time.deltaTime;
             UpdateProgress();
+            isClear = false;
         }
         else
         {
             //text.fontSize = 1000;
-            transform.localScale = new Vector3(1f, 1f, 1f);
-            focusDuration = 0f;
-            progress.fillAmount = 0f;
+            if (!isClear)
+            {
+                transform.localScale = new Vector3(1f, 1f, 1f);
+                focusDuration = 0f;
+                progress.fillAmount = 0f;
+                isClear = true;
+            }
         }
 
         if (focusDuration >= focusThreshold)
