@@ -205,7 +205,7 @@ Transform:
   m_GameObject: {fileID: 5550036835304156943}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.3, y: 6.78, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 5550036835192817608}
   - {fileID: 5550036835047900228}
@@ -243,10 +243,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b93ed3ba8d1a4448a7ff82e484ed3be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: 11, y: 9.97, z: 0}
-  target: {x: 11, y: 8.3, z: 0}
+  pos: {x: 11.16, y: 16.74, z: 0}
+  target: {x: 11.16, y: 16.74, z: 0}
   speed: 3
   canMove: 0
   rotateSpeed: 0.01
   isRotate: 0
-  coroTime: 3
+  coroTime: 1
+  SoundNum: 0

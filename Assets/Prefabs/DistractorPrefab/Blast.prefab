@@ -92,6 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8257616186560575671}
   - component: {fileID: 2585134348033962228}
+  - component: {fileID: 4631414057899400736}
   m_Layer: 0
   m_Name: Blast
   m_TagString: Untagged
@@ -133,3 +134,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4631414057899400736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5401311356352990250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b93ed3ba8d1a4448a7ff82e484ed3be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pos: {x: 0, y: 0, z: 0}
+  target: {x: 0, y: 0, z: 0}
+  speed: 3
+  canMove: 0
+  rotateSpeed: 0.01
+  isRotate: 1
+  coroTime: 1
+  SoundNum: 0

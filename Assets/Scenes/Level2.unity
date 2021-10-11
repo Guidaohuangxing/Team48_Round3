@@ -603,7 +603,7 @@ PrefabInstance:
       objectReference: {fileID: 158444945}
     - target: {fileID: 3242119918987556880, guid: 36a125a052c2f7e4e949a30b06e0e521, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3242119918987556881, guid: 36a125a052c2f7e4e949a30b06e0e521, type: 3}
       propertyPath: m_RootOrder
@@ -1296,6 +1296,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1496785767
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3993228404823404908, guid: f2717132a3b173443aa01cb62bfb6e92, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993228404823404908, guid: f2717132a3b173443aa01cb62bfb6e92, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993228404823404908, guid: f2717132a3b173443aa01cb62bfb6e92, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993228404823404908, guid: f2717132a3b173443aa01cb62bfb6e92, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993228404823404908, guid: f2717132a3b173443aa01cb62bfb6e92, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993228404823404908, guid: f2717132a3b173443aa01cb62bfb6e92, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993228404823404908, guid: f2717132a3b173443aa01cb62bfb6e92, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993228404823404908, guid: f2717132a3b173443aa01cb62bfb6e92, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993228404823404908, guid: f2717132a3b173443aa01cb62bfb6e92, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993228404823404908, guid: f2717132a3b173443aa01cb62bfb6e92, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993228404823404908, guid: f2717132a3b173443aa01cb62bfb6e92, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7684731947008043743, guid: f2717132a3b173443aa01cb62bfb6e92, type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f2717132a3b173443aa01cb62bfb6e92, type: 3}
 --- !u!1 &1742131592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1707,27 +1764,55 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
       propertyPath: distractorParent
       value: 
       objectReference: {fileID: 535043160}
     - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
       propertyPath: distractorsStages.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
+      propertyPath: distractorsStages.Array.data[0].generateTimeMax
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
+      propertyPath: distractorsStages.Array.data[0].generateTimeMin
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
       propertyPath: distractorsStages.Array.data[1].generateTimeMax
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
       propertyPath: distractorsStages.Array.data[1].generateTimeMin
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
       propertyPath: distractorsStages.Array.data[2].generateTimeMax
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
       propertyPath: distractorsStages.Array.data[2].generateTimeMin
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
+      propertyPath: distractorsStages.Array.data[3].generateTimeMax
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
+      propertyPath: distractorsStages.Array.data[3].generateTimeMin
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
+      propertyPath: distractorsStages.Array.data[4].generateTimeMax
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
+      propertyPath: distractorsStages.Array.data[4].generateTimeMin
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
@@ -1739,9 +1824,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
+      propertyPath: distractorsStages.Array.data[2].generateDistractors.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
+      propertyPath: distractorsStages.Array.data[3].generateDistractors.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
+      propertyPath: distractorsStages.Array.data[4].generateDistractors.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
       propertyPath: distractorsStages.Array.data[0].generateDistractors.Array.data[0]
       value: 
-      objectReference: {fileID: 8546399488808053009, guid: 5a60aba49bde53c4197c3773f088f17e, type: 3}
+      objectReference: {fileID: 9035112152450258098, guid: 17ec004286bd01147a9bcde7ac8794b3, type: 3}
     - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
       propertyPath: distractorsStages.Array.data[0].generateDistractors.Array.data[1]
       value: 
@@ -1749,7 +1846,7 @@ PrefabInstance:
     - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
       propertyPath: distractorsStages.Array.data[1].generateDistractors.Array.data[0]
       value: 
-      objectReference: {fileID: 9035112152450258098, guid: 17ec004286bd01147a9bcde7ac8794b3, type: 3}
+      objectReference: {fileID: 1390781495239033347, guid: 1b649dd283f9d3b4a90a85fe28722baa, type: 3}
     - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
       propertyPath: distractorsStages.Array.data[2].generateDistractors.Array.data[0]
       value: 
@@ -1757,7 +1854,35 @@ PrefabInstance:
     - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
       propertyPath: distractorsStages.Array.data[2].generateDistractors.Array.data[1]
       value: 
+      objectReference: {fileID: 1355872107894708971, guid: e53bedf5c70f82c45820f864461a9d44, type: 3}
+    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
+      propertyPath: distractorsStages.Array.data[2].generateDistractors.Array.data[2]
+      value: 
+      objectReference: {fileID: 654219412598572482, guid: 2e325de9a301b7441908e87c3e02e51c, type: 3}
+    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
+      propertyPath: distractorsStages.Array.data[3].generateDistractors.Array.data[0]
+      value: 
+      objectReference: {fileID: 1390781495239033347, guid: 1b649dd283f9d3b4a90a85fe28722baa, type: 3}
+    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
+      propertyPath: distractorsStages.Array.data[3].generateDistractors.Array.data[1]
+      value: 
       objectReference: {fileID: 6789352999543761092, guid: 42b54b07b7c580f43b987842daa55905, type: 3}
+    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
+      propertyPath: distractorsStages.Array.data[3].generateDistractors.Array.data[2]
+      value: 
+      objectReference: {fileID: 4526400229077541930, guid: dee249c17ee306544912b25f707a63f5, type: 3}
+    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
+      propertyPath: distractorsStages.Array.data[4].generateDistractors.Array.data[0]
+      value: 
+      objectReference: {fileID: 4526400229077541930, guid: dee249c17ee306544912b25f707a63f5, type: 3}
+    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
+      propertyPath: distractorsStages.Array.data[4].generateDistractors.Array.data[1]
+      value: 
+      objectReference: {fileID: 654219412598572482, guid: 2e325de9a301b7441908e87c3e02e51c, type: 3}
+    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
+      propertyPath: distractorsStages.Array.data[4].generateDistractors.Array.data[2]
+      value: 
+      objectReference: {fileID: 2808640866475543599, guid: f847b06767194684787f0585380e34ca, type: 3}
     - target: {fileID: 3349444943464050572, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
       propertyPath: m_RootOrder
       value: 5
