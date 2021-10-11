@@ -5,12 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class CutSceneControl : MonoBehaviour
 {
-    float waitTime = 3f;
+    [SerializeField] float waitTime = 3f;
     [SerializeField] string nextScene;
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine("WaitNLoad");
+        if (!nextScene.Equals(""))
+        {
+            StartCoroutine("WaitNLoad");
+        }
+        if (CompareTag("Finish"))
+        {
+            audioSource = GetComponent<AudioSource>();
+            StartCoroutine("WaitNEnd");
+        }
     }
 
     // Update is called once per frame
@@ -22,5 +31,11 @@ public class CutSceneControl : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
         SceneManager.LoadScene(nextScene);
+    }
+
+    IEnumerator WaitNEnd()
+    {
+        yield return new WaitForSeconds(audioSource.clip.length+1);
+        Application.Quit();
     }
 }
