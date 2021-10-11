@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenes:
-  - Level1
-  - Level2
-  - Level3
+  - File1
+  - File2
+  - File3
+  - End
