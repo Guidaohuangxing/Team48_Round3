@@ -9,7 +9,7 @@ public class MenuFocus : MonoBehaviour
     private GazeAware _gazeAware;
     private float focusDuration = 0f; //s
     [SerializeField]
-    private float focusThreshold = 5f; //s
+    private float focusThreshold = 3f; //s
     [SerializeField] Image progress;
     private TMPro.TextMeshPro text;
 

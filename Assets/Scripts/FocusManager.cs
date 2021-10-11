@@ -57,14 +57,16 @@ public class FocusManager : MonoBehaviour
         if (gotPenalty)
         {
             gotPenalty = false;
-            character.GetComponent<CharacterMovement>().DeactivateAngryMark();
+            //character.GetComponent<CharacterMovement>().DeactivateAngryMark();
         }
+        character.GetComponent<CharacterMovement>().DeactivateAngryMark();
         focusDuration += Time.deltaTime;
         UpdateProgress();
         if (focusDuration >= focusThreshold)
         {
             focusDuration = focusThreshold;
             completed = true;
+            GameManager.Instance.NextScene();
         }
     }
     void PenaltyOnce()
@@ -72,6 +74,8 @@ public class FocusManager : MonoBehaviour
         if (!gotPenalty)
         {
             focusDuration -= focusThreshold * penaltyRatio;
+            if (focusDuration < 0)
+                focusDuration = 0f;
             UpdateProgress();
             gotPenalty = true;
         }

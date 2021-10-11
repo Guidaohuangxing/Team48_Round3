@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour
 
     public void NextScene()
     {
+        if (sceneIndex == scenes.Length)
+            EndGame();
         string next = scenes[sceneIndex];
         SceneManager.LoadScene(next);
     }
