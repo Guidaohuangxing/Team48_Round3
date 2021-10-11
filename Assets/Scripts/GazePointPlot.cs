@@ -20,6 +20,7 @@ public class GazePointPlot : MonoBehaviour
 	void Start()
     {
 		gazePointSprite = GetComponent<SpriteRenderer>();
+		offset = PlayerSetting.EyeOffset;
 	}
 
     // Update is called once per frame
