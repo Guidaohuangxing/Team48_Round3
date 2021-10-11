@@ -2003,7 +2003,7 @@ PrefabInstance:
       objectReference: {fileID: 158444945}
     - target: {fileID: 3242119918987556880, guid: 36a125a052c2f7e4e949a30b06e0e521, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3242119918987556881, guid: 36a125a052c2f7e4e949a30b06e0e521, type: 3}
       propertyPath: m_RootOrder
