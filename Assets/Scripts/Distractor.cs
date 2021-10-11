@@ -106,4 +106,18 @@ public class Distractor : MonoBehaviour
         SoundManager.Instance.PlaySound(playNub);
         
     }
+
+    public void StartEndGame(string End)
+    {
+        if(End == "End")
+        {
+            StartCoroutine(EndGame());
+        }
+    }
+    IEnumerator EndGame()
+    {
+        yield return new WaitForSeconds(coroTime);
+        Application.Quit();
+
+    }
 }

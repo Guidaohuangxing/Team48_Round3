@@ -17,8 +17,8 @@ public class CutSceneControl : MonoBehaviour
         }
         if (CompareTag("Finish"))
         {
-            audioSource = GetComponent<AudioSource>();
-            StartCoroutine("WaitNEnd");
+            //audioSource = GetComponent<AudioSource>();
+            //StartCoroutine("WaitNEnd");
         }
     }
 
