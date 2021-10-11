@@ -347,6 +347,13 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 0.06666667
+    functionName: PlayOwnSound
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 2
+    messageOptions: 0
   - time: 1.4666667
     functionName: StartMoveDistractor
     data: AnimateEnd

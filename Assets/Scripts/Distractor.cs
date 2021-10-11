@@ -15,6 +15,7 @@ public class Distractor : MonoBehaviour
     public float rotateSpeed = .01f;
     public bool isRotate = true;
     public float coroTime = 3f;
+    public int SoundNum = 0;//sound clips numbers
     private float startTime = 0;
     private float endTime = 0;
     private float wholeRotateAngle = 0;
@@ -92,10 +93,17 @@ public class Distractor : MonoBehaviour
 
     public void DestroyDog(string dog)
     {
-        print("destroy dog");
+        //print("destroy dog");
         if(dog != null)
         {
             Destroy(GameObject.FindGameObjectWithTag(dog));
         }
+    }
+
+    public void PlayOwnSound(int playNub)
+    {
+      
+        SoundManager.Instance.PlaySound(playNub);
+        
     }
 }

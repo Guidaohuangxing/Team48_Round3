@@ -9,7 +9,8 @@ public class SoundManager : MonoBehaviour
     static SoundManager _instance;
     [SerializeField] AudioClip[] clips;
     AudioSource _audiosource;
-
+    private List<AudioSource> addAS = new List<AudioSource>();
+    
     // Start is called before the first frame update
     private void Awake()
     {
@@ -26,19 +27,36 @@ public class SoundManager : MonoBehaviour
     void Start()
     {
         _audiosource = GetComponent<AudioSource>();
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+      for(int i = 0; i < addAS.Count; i++)
+        {
+            if(!addAS[i].isPlaying)
+            {
+                Destroy(addAS[i]);
+                addAS.RemoveAt(i);
+            }
+        }   
     }
 
     public void PlaySound(int index)
     {
-        if (!_audiosource.isPlaying)
-        {
-            _audiosource.PlayOneShot(clips[index]);
-        }
+        AudioSource AS = this.gameObject.AddComponent<AudioSource>();
+        AS.PlayOneShot(clips[index]);
+        addAS.Add(AS);
+
     }
+
+    public void PlaySound(int index,float volum)
+    {
+        AudioSource AS = this.gameObject.AddComponent<AudioSource>();
+        AS.PlayOneShot(clips[index], volum);
+        addAS.Add(AS);
+    }
+
+
 }
