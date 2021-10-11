@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     int sceneIndex = 0;
     [SerializeField]
     string[] scenes;
+    [SerializeField] GameObject[] keyMask;
 
     // Start is called before the first frame update
     private void Awake()
@@ -49,10 +50,50 @@ public class GameManager : MonoBehaviour
         {
             float horiInput = Input.GetAxis("Horizontal");
             float vertInput = Input.GetAxis("Vertical");
-            Debug.Log("hori input: " + horiInput + " veti input: " + vertInput);
+            //Debug.Log("hori input: " + horiInput + " veti input: " + vertInput);
+            UpdateKeyMask();
             PlayerSetting.EyeOffset += new Vector2(horiInput, vertInput);
             Debug.Log("eye offset: " + PlayerSetting.EyeOffset);
             playerGazePoint.GetComponent<GazePointPlot>().offset = PlayerSetting.EyeOffset;
+        }
+    }
+
+    private void UpdateKeyMask()
+    {
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+        {
+            keyMask[0].SetActive(true);
+        }
+        if (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.W))
+        {
+            keyMask[0].SetActive(false);
+        }
+
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+        {
+            keyMask[1].SetActive(true);
+        }
+        if (Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.S))
+        {
+            keyMask[1].SetActive(false);
+        }
+
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        {
+            keyMask[2].SetActive(true);
+        }
+        if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.A))
+        {
+            keyMask[2].SetActive(false);
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        {
+            keyMask[3].SetActive(true);
+        }
+        if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D))
+        {
+            keyMask[3].SetActive(false);
         }
     }
 
