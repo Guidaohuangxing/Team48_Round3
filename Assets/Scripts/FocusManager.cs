@@ -23,11 +23,13 @@ public class FocusManager : MonoBehaviour
     private float changeEyeFreq = 5f;
     private bool eyeFlag = false;
     private bool[] hasFocus;
+    private GameObject playerGazePoint;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        playerGazePoint = GameObject.FindGameObjectWithTag("Player");
         if (multiEye)
         {
             openEyeIndex = Random.Range(0, eyes.Length);
@@ -60,6 +62,7 @@ public class FocusManager : MonoBehaviour
             //character.GetComponent<CharacterMovement>().DeactivateAngryMark();
         }
         character.GetComponent<CharacterMovement>().DeactivateAngryMark();
+        playerGazePoint.GetComponent<GazePointPlot>().ShowGlow();
         focusDuration += Time.deltaTime;
         UpdateProgress();
         if (focusDuration >= focusThreshold)
@@ -79,6 +82,7 @@ public class FocusManager : MonoBehaviour
             UpdateProgress();
             gotPenalty = true;
         }
+        playerGazePoint.GetComponent<GazePointPlot>().HideGlow();
         character.GetComponent<CharacterMovement>().ActivateAngryMark();
     }
     void PenaltyThroughTime()
@@ -89,6 +93,7 @@ public class FocusManager : MonoBehaviour
             focusDuration = 0f;
         }
         UpdateProgress();
+        playerGazePoint.GetComponent<GazePointPlot>().HideGlow();
         character.GetComponent<CharacterMovement>().ActivateAngryMark();
     }
 

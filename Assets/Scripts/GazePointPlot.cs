@@ -13,7 +13,9 @@ public class GazePointPlot : MonoBehaviour
 	private bool _hasHistoricPoint;
 	private Vector3 _historicPoint;
 	[SerializeField] Canvas canvas;
+	[SerializeField] GameObject heartGlow;
 	public bool gazePointOnCanvas;
+	public Vector2 offset;
 	// Start is called before the first frame update
 	void Start()
     {
@@ -61,7 +63,7 @@ public class GazePointPlot : MonoBehaviour
 	private Vector3 ProjectToCanvas(GazePoint gazePoint)
     {
 		Vector2 viewPortEyePos = gazePoint.Viewport - new Vector2(0.5f, 0.5f);
-		Vector3 eyePos = viewPortEyePos * new Vector2(canvas.renderingDisplaySize.x / canvas.scaleFactor, canvas.renderingDisplaySize.y / canvas.scaleFactor);
+		Vector3 eyePos = viewPortEyePos * new Vector2(canvas.renderingDisplaySize.x / canvas.scaleFactor, canvas.renderingDisplaySize.y / canvas.scaleFactor) + offset;
 		return eyePos;
     }
 
@@ -82,4 +84,14 @@ public class GazePointPlot : MonoBehaviour
 
 		return smoothedPoint;
 	}
+
+	public void ShowGlow()
+    {
+		heartGlow.SetActive(true);
+    }
+
+	public void HideGlow()
+    {
+		heartGlow.SetActive(false);
+    }
 }
