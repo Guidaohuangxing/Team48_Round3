@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CutSceneControl : MonoBehaviour
 {
-    [SerializeField] float waitTime = 3f;
+    [SerializeField] float waitTime = 4f;
     [SerializeField] string nextScene;
     private AudioSource audioSource;
     // Start is called before the first frame update
