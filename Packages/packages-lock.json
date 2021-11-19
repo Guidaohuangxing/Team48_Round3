@@ -1,9 +1,15 @@
 {
   "dependencies": {
     "com.tobii.gaming.sdk": {
-      "version": "file:C:/Users/tsaiyenk/Downloads/TobiiUnitySDK_4.1.0",
+      "version": "file:C:/tobii",
       "depth": 0,
       "source": "local",
+      "dependencies": {}
+    },
+    "com.unity.2d.sprite": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
       "dependencies": {}
     },
     "com.unity.collab-proxy": {

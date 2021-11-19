@@ -45,19 +45,68 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distractorsStages:
   - generateTimeMin: 5
-    generateTimeMax: 10
+    generateTimeMax: 6
     generateDistractors:
-    - {fileID: 8546399488808053009, guid: 5a60aba49bde53c4197c3773f088f17e, type: 3}
-  - generateTimeMin: 7
-    generateTimeMax: 10
+    - {fileID: 5401311356352990250, guid: 5e4d8a6b8dea0c74caee519f55d76aed, type: 3}
+  - generateTimeMin: 4
+    generateTimeMax: 5
     generateDistractors:
-    - {fileID: 8546399488808053009, guid: 5a60aba49bde53c4197c3773f088f17e, type: 3}
-    - {fileID: 5550036835304156943, guid: a3621ad9c2b3be44089c5c28de5b9670, type: 3}
-  - generateTimeMin: 7
-    generateTimeMax: 10
+    - {fileID: 654219412598572482, guid: 2e325de9a301b7441908e87c3e02e51c, type: 3}
+    - {fileID: 2808640866475543599, guid: f847b06767194684787f0585380e34ca, type: 3}
+    - {fileID: 2568126071093630366, guid: f37df016de75b7a49aff7d138828d9e4, type: 3}
+  - generateTimeMin: 5
+    generateTimeMax: 6
+    generateDistractors:
+    - {fileID: 5401311356352990250, guid: 5e4d8a6b8dea0c74caee519f55d76aed, type: 3}
+    - {fileID: 2568126071093630366, guid: f37df016de75b7a49aff7d138828d9e4, type: 3}
+    - {fileID: 9035112152450258098, guid: 17ec004286bd01147a9bcde7ac8794b3, type: 3}
+  - generateTimeMin: 5
+    generateTimeMax: 6
     generateDistractors:
     - {fileID: 8546399488808053009, guid: 5a60aba49bde53c4197c3773f088f17e, type: 3}
     - {fileID: 2808640866475543599, guid: f847b06767194684787f0585380e34ca, type: 3}
     - {fileID: 5550036835304156943, guid: a3621ad9c2b3be44089c5c28de5b9670, type: 3}
+    - {fileID: 1390781495239033347, guid: 1b649dd283f9d3b4a90a85fe28722baa, type: 3}
+  - generateTimeMin: 5
+    generateTimeMax: 6
+    generateDistractors:
+    - {fileID: 1390781495239033347, guid: 1b649dd283f9d3b4a90a85fe28722baa, type: 3}
+    - {fileID: 6789352999543761092, guid: 42b54b07b7c580f43b987842daa55905, type: 3}
+    - {fileID: 2568126071093630366, guid: f37df016de75b7a49aff7d138828d9e4, type: 3}
+  - generateTimeMin: 7
+    generateTimeMax: 8
+    generateDistractors:
+    - {fileID: 9145549818828987322, guid: 68fdbb872d3166145ba3857a00931cf8, type: 3}
+  - generateTimeMin: 7
+    generateTimeMax: 8
+    generateDistractors:
+    - {fileID: 5147697083311080708, guid: 24e5a0eb553e1ac46bd006b1928dc25e, type: 3}
+  - generateTimeMin: 0.5
+    generateTimeMax: 1
+    generateDistractors:
+    - {fileID: 5401311356352990250, guid: 5e4d8a6b8dea0c74caee519f55d76aed, type: 3}
+  - generateTimeMin: 0.5
+    generateTimeMax: 1
+    generateDistractors:
+    - {fileID: 2568126071093630366, guid: f37df016de75b7a49aff7d138828d9e4, type: 3}
   stage: 0
   time: 0
+  distractorParent: {fileID: 3349444943464050570}
+  randomTimeMin: 8
+  randomTimeMax: 9
+  randomGenerateNumMin: 2
+  randomGenerateNumMax: 4
+  allDistractors:
+  - {fileID: 4526400229077541930, guid: dee249c17ee306544912b25f707a63f5, type: 3}
+  - {fileID: 654219412598572482, guid: 2e325de9a301b7441908e87c3e02e51c, type: 3}
+  - {fileID: 5401311356352990250, guid: 5e4d8a6b8dea0c74caee519f55d76aed, type: 3}
+  - {fileID: 2568126071093630366, guid: f37df016de75b7a49aff7d138828d9e4, type: 3}
+  - {fileID: 5147697083311080708, guid: 24e5a0eb553e1ac46bd006b1928dc25e, type: 3}
+  - {fileID: 1390781495239033347, guid: 1b649dd283f9d3b4a90a85fe28722baa, type: 3}
+  - {fileID: 1355872107894708971, guid: e53bedf5c70f82c45820f864461a9d44, type: 3}
+  - {fileID: 9035112152450258098, guid: 17ec004286bd01147a9bcde7ac8794b3, type: 3}
+  - {fileID: 9145549818828987322, guid: 68fdbb872d3166145ba3857a00931cf8, type: 3}
+  - {fileID: 6789352999543761092, guid: 42b54b07b7c580f43b987842daa55905, type: 3}
+  - {fileID: 8546399488808053009, guid: 5a60aba49bde53c4197c3773f088f17e, type: 3}
+  - {fileID: 2808640866475543599, guid: f847b06767194684787f0585380e34ca, type: 3}
+  - {fileID: 5550036835304156943, guid: a3621ad9c2b3be44089c5c28de5b9670, type: 3}

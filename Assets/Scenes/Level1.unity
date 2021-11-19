@@ -1585,6 +1585,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2137471697}
     - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
+      propertyPath: randomGenerateNumMax
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
+      propertyPath: randomGenerateNumMin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349444943464050571, guid: 5c02dc34003b8574fa88781e8897e8cf, type: 3}
       propertyPath: distractorsStages.Array.size
       value: 4
       objectReference: {fileID: 0}
