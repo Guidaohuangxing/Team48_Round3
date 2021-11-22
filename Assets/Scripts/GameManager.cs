@@ -12,11 +12,16 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get => _instance; }
     static GameManager _instance;
-    GameObject playerGazePoint;
+    GameObject[] playerGazePoint;
     int sceneIndex = 0;
     [SerializeField]
     string[] scenes;
+    [SerializeField] string[] failScenes;
     [SerializeField] GameObject[] keyMask;
+    bool waypointFlag = false;
+
+    float[] gameLength = new float[] { 30f, 45f, 90f };
+    float gameTime = 0f;
 
     // Start is called before the first frame update
     private void Awake()
@@ -34,12 +39,17 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Scene thisScene = SceneManager.GetActiveScene();
-        playerGazePoint = GameObject.FindGameObjectWithTag("Player");
+        playerGazePoint = GameObject.FindGameObjectsWithTag("Player");
+        if(playerGazePoint.Length > 1)
+        {
+            playerGazePoint[1].SetActive(false);
+        }
         Debug.Log(thisScene.name);
         if (!thisScene.name.Equals("Menu"))
         {
             sceneIndex = int.Parse(thisScene.name[thisScene.name.Length - 1].ToString());
             Debug.Log("scene index: " + sceneIndex);
+            gameTime = 0;
         }
     }
 
@@ -54,7 +64,26 @@ public class GameManager : MonoBehaviour
             UpdateKeyMask();
             PlayerSetting.EyeOffset += new Vector2(horiInput, vertInput);
             Debug.Log("eye offset: " + PlayerSetting.EyeOffset);
-            playerGazePoint.GetComponent<GazePointPlot>().offset = PlayerSetting.EyeOffset;
+            playerGazePoint[0].GetComponent<GazePointPlot>().offset = PlayerSetting.EyeOffset;
+        }
+        else
+        {
+            gameTime += Time.deltaTime;
+            if (gameTime >= gameLength[sceneIndex - 1] * 0.8f && !waypointFlag)
+            {
+                Debug.Log("Almost finish");
+                if(playerGazePoint.Length > 1)
+                {
+                    playerGazePoint[0].SetActive(false);
+                    playerGazePoint[1].SetActive(true);
+                }
+                waypointFlag = true;
+            }
+            if (gameTime >= gameLength[sceneIndex - 1])
+            {
+                SceneManager.LoadScene(failScenes[sceneIndex - 1]);
+            }
+
         }
     }
 

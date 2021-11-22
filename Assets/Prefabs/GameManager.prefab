@@ -48,3 +48,8 @@ MonoBehaviour:
   - File2
   - File3
   - End
+  failScenes:
+  - Fail1
+  - Fail2
+  - Fail3
+  keyMask: []

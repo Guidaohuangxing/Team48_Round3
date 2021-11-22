@@ -325,6 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c644c6c0a0be04f894a85509723a25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waitTime: 4
   nextScene: Level2
 --- !u!4 &1530618673
 Transform:
@@ -710,7 +711,7 @@ Transform:
   m_GameObject: {fileID: 1820646613}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 959.6627, y: 538.6835, z: 0}
-  m_LocalScale: {x: 90.502396, y: 100.500916, z: 1}
+  m_LocalScale: {x: 90.502396, y: 90, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2

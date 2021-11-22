@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using Tobii.Gaming;
 
-public class MenuFocus : MonoBehaviour
+public class ButtonFocus : MonoBehaviour
 {
     private GazeAware _gazeAware;
     private float focusDuration = 0f; //s
@@ -13,11 +14,14 @@ public class MenuFocus : MonoBehaviour
     [SerializeField] Image progress;
     private bool isClear = false;
     private TMPro.TextMeshPro text;
+    Scene thisScene;
+    [SerializeField] FailSceneManager sceneManager;
 
     // Start is called before the first frame update
     void Start()
     {
         _gazeAware = GetComponent<GazeAware>();
+        thisScene = SceneManager.GetActiveScene();
         //text = GetComponent<TMPro.TextMeshPro>();
     }
 
@@ -46,13 +50,27 @@ public class MenuFocus : MonoBehaviour
 
         if (focusDuration >= focusThreshold)
         {
-            if (CompareTag("Finish"))
+            if (thisScene.name.Equals("Menu"))
             {
-                GameManager.Instance.EndGame();
+                if (CompareTag("Finish"))
+                {
+                    GameManager.Instance.EndGame();
+                }
+                else
+                {
+                    GameManager.Instance.NextScene();
+                }
             }
             else
             {
-                GameManager.Instance.NextScene();
+                if (CompareTag("Restart"))
+                {
+                    sceneManager.RestartLevel();
+                }
+                else
+                {
+                    sceneManager.BackToMenu();
+                }
             }
         }
 
