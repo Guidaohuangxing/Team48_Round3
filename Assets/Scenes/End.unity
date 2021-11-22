@@ -327,8 +327,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c644c6c0a0be04f894a85509723a25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 3
-  nextScene: 
+  waitTime: 8
+  nextScene: Menu
 --- !u!4 &1530618673
 Transform:
   m_ObjectHideFlags: 0
@@ -459,6 +459,12 @@ MonoBehaviour:
   stage: 0
   time: 0
   distractorParent: {fileID: 1899001249}
+  randomTimeMin: 6
+  randomTimeMax: 7
+  randomGenerateNumMin: 2
+  randomGenerateNumMax: 5
+  allDistractors: []
+  isRandomGenerate: 0
 --- !u!1 &1542985650
 GameObject:
   m_ObjectHideFlags: 0

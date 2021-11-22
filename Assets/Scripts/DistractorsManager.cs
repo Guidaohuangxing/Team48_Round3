@@ -22,13 +22,17 @@ public class DistractorsManager : MonoBehaviour
     public int randomGenerateNumMin = 2;
     public int randomGenerateNumMax = 5;
     public List<GameObject> allDistractors = new List<GameObject>();
-
+    public bool isRandomGenerate = true;
 
 
     private void Update()
     {
         GenerateDistractorsByStage();
-        RandomDistractorsGenerate();
+        if (isRandomGenerate)
+        {
+            RandomDistractorsGenerate();
+        }
+        
     }
 
     private void GenerateDistractorsByStage()
